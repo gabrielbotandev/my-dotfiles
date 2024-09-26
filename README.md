@@ -183,7 +183,7 @@ choco install starship
    $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
    ```
 
-Para mais informações, consulte a [documentação oficial do Starship](https://starship.rs/docs/).
+Para mais informações, consulte a [documentação oficial do Starship](https://starship.rs/config/).
 
 ## 10. Instalando e Configurando o posh-git
 
