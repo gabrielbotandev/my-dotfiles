@@ -1,0 +1,82 @@
+{
+  // Explorer ------------------------------------------------------------------
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "explorer.confirmDelete": true,
+  // Workbench -----------------------------------------------------------------
+  "workbench.iconTheme": "symbols",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.labelFormat": "short",
+  "workbench.layoutControl.enabled": false,
+  "workbench.statusBar.visible": true,
+  "workbench.colorTheme": "One Dark Pro Darker",
+  "breadcrumbs.enabled": false,
+  // Editor --------------------------------------------------------------------
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.fontWeight": "400",
+  "editor.lineHeight": 1.8,
+  "editor.renderLineHighlight": "gutter",
+  "editor.semanticHighlighting.enabled": false,
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "visible",
+  "editor.stickyScroll.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.parameterHints.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.rulers": [80, 120],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  // Window --------------------------------------------------------------------
+  "window.commandCenter": false,
+  // Terminal ------------------------------------------------------------------
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.gpuAcceleration": "off",
+  // Autosave ------------------------------------------------------------------
+  "files.autoSave": "afterDelay",
+  // Live server ---------------------------------------------------------------
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.CustomBrowser": "chrome",
+  // Git -----------------------------------------------------------------------
+  "git.openRepositoryInParentFolders": "never",
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "javascript": true
+  },
+  // Security ------------------------------------------------------------------
+  "security.workspace.trust.untrustedFiles": "open",
+  "security.workspace.trust.enabled": true,
+  // Symbols -------------------------------------------------------------------
+  "symbols.hidesExplorerArrows": false,
+  // Formatter -----------------------------------------------------------------
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

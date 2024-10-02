@@ -1,0 +1,31 @@
+{
+    "extensions": [
+        // Themes --------------------------------------------------------------
+        "Bluloco Dark Theme",
+        "Min theme",
+        "One Dark Pro",
+        "Symbols",
+        // Code Utilities ------------------------------------------------------
+        "Code Runner",
+        "CodeSnap",
+        // Presence and Collaboration ------------------------------------------
+        "Discord Presence",
+        "Live Share",
+        // Language Support ----------------------------------------------------
+        "Github copilot",
+        "GitLens",
+        "Intellicode",
+        "PHP Debug",
+        "PHP Intelephense",
+        "Powershell",
+        // Formatting and Previewing -------------------------------------------
+        "Even Better TOML",
+        "Markdown Preview Enhanced",
+        "Prettier - Code formatter",
+        "SQLTools",
+        "SVG Preview",
+        // Miscellaneous -------------------------------------------------------
+        "Live server",
+        "Tailwind CSS Intellisense"
+    ]
+}
