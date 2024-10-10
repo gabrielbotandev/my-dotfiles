@@ -10,7 +10,7 @@
   "workbench.editor.labelFormat": "short",
   "workbench.layoutControl.enabled": false,
   "workbench.statusBar.visible": true,
-  "workbench.colorTheme": "One Dark Pro Darker",
+  "workbench.colorTheme": "Min Dark",
   "breadcrumbs.enabled": false,
   // Editor --------------------------------------------------------------------
   "editor.fontFamily": "JetBrains Mono",
@@ -26,7 +26,6 @@
   "editor.stickyScroll.enabled": false,
   "editor.wordWrap": "on",
   "editor.parameterHints.enabled": false,
-  "editor.formatOnSave": true,
   "editor.rulers": [80, 120],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
@@ -55,7 +54,7 @@
   "git.enableSmartCommit": true,
   "git.autofetch": true,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
@@ -78,5 +77,7 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   }
-}
