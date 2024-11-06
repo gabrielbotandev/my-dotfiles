@@ -5,18 +5,20 @@
         "Min theme",
         "One Dark Pro",
         "Symbols",
+        "SpaceBox",
         // Code Utilities ------------------------------------------------------
         "Code Runner",
         "CodeSnap",
+        // IA ------------------------------------------------------------------
+        "GitHub Copilot",
+        "Intellicode",
+        "PHP Intelephense",
         // Presence and Collaboration ------------------------------------------
         "Discord Presence",
         "Live Share",
         // Language Support ----------------------------------------------------
-        "Github copilot",
         "GitLens",
-        "Intellicode",
         "PHP Debug",
-        "PHP Intelephense",
         "Powershell",
         // Formatting and Previewing -------------------------------------------
         "Even Better TOML",
