@@ -6,14 +6,15 @@
   "explorer.confirmDelete": true,
   // Workbench -----------------------------------------------------------------
   "workbench.iconTheme": "symbols",
-  "workbench.startupEditor": "newUntitledFile",
+  "workbench.startupEditor": "none",
   "workbench.editor.labelFormat": "short",
-  "workbench.layoutControl.enabled": false,
-  "workbench.statusBar.visible": true,
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.location": "top",
+  "workbench.tree.indent": 12,
   "breadcrumbs.enabled": false,
   // Editor --------------------------------------------------------------------
-  "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
+  "editor.fontFamily": "JetBrains Mono",
   "editor.fontSize": 14,
   "editor.fontWeight": "400",
   "editor.lineHeight": 1.8,
@@ -21,19 +22,16 @@
   "editor.semanticHighlighting.enabled": false,
   "editor.minimap.enabled": false,
   "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "visible",
+  "editor.scrollbar.vertical": "hidden",
   "editor.stickyScroll.enabled": false,
   "editor.wordWrap": "on",
   "editor.parameterHints.enabled": false,
   "editor.rulers": [80, 120],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always",
-    "quickfix.biome": "explicit",
-    "source.organizeImports.biome": "explicit"
+    "source.fixAll.eslint": "always"
   },
-  // Window --------------------------------------------------------------------
-  "window.commandCenter": false,
   // Terminal ------------------------------------------------------------------
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
@@ -47,7 +45,6 @@
   // Live server ---------------------------------------------------------------
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
-  "liveServer.settings.CustomBrowser": "chrome",
   // Git -----------------------------------------------------------------------
   "git.openRepositoryInParentFolders": "never",
   "git.enableSmartCommit": true,
@@ -82,7 +79,15 @@
   },
   "prettier.semi": false,
   "workbench.panel.showLabels": false,
-  "workbench.colorTheme": "Bearded Theme Vivid Black",
-  "codesnap.containerPadding": "20em",
+  "workbench.colorTheme": "Min Dark",
+  "window.menuBarVisibility": "toggle",
+  "workbench.navigationControl.enabled": false,
+  "workbench.editor.enablePreview": false,
   "codesnap.showLineNumbers": false,
+  "prettier.singleQuote": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:o1-ga",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "window.customTitleBarVisibility": "windowed"
 }
