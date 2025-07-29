@@ -1,144 +1,132 @@
 watch_stylesheet: true
 watch_config: true
-debug: true
+debug: false
 komorebi:
-  start_command: "komorebic start --whkd"
-  stop_command: "komorebic stop --whkd"
-  reload_command: "komorebic stop --whkd && komorebic start --whkd"
+  start_command: 'komorebic start --whkd'
+  stop_command: 'komorebic stop --whkd'
+  reload_command: 'komorebic reload-configuration'
 bars:
-  primary-bar:
+  status-bar:
     enabled: true
-    screens: ["*"]
-    class_name: "yasb-bar"
+    screens: ['*']
+    class_name: 'yasb-bar'
     alignment:
-      position: "top"
+      position: 'top'
       center: false
     blur_effect:
       enabled: true
       acrylic: false
-      dark_mode: false
-      round_corners: true
-      border_color: System
+      dark_mode: true
+      round_corners: false
+      border_color: None
     window_flags:
       always_on_top: false
       windows_app_bar: true
     dimensions:
-      width: "100%"
-      height: 32
-    padding:
-      top: 0
-      left: 0
-      bottom: 0
-      right: 0
+      width: '100%'
+      height: 30
     widgets:
-      left: ["komorebi_workspaces", "active_window"]
-      center: ["clock", "apps"]
-      right: [
-          "ai",
-
-          "taskbar",
-          "whkd",
-          "volume",
-          "power_menu"
-        ]
+      left: ['home', 'active_window']
+      center: []
+      right: ['media', 'volume', 'weather', 'clock']
 widgets:
   media:
-    type: "yasb.media.MediaWidget"
+    type: 'yasb.media.MediaWidget'
     options:
-      label: "{title}"
-      label_alt: "{artist}"
-      max_field_size:
-        label: 30
-        label_alt: 24
+      label: '{title} - {artist}'
       show_thumbnail: true
-      controls_only: false
       controls_left: true
       hide_empty: true
-      thumbnail_alpha: 250
-      thumbnail_padding: 8
-      thumbnail_corner_radius: 0
+      controls_only: false
+      callbacks:
+        on_left: 'toggle_media_menu'
+        on_middle: 'toggle_media_menu'
+        on_right: 'toggle_media_menu'
+      scrolling_label:
+        enabled: true
+        update_interval_ms: 33
+        style: 'left'
+        separator: ' | '
+        label_padding: 1
+        ease_slope: 20
+        ease_pos: 0.8
+        ease_min: 0.5
       icons:
-        prev_track: "\ue892"
-        next_track: "\ue893"
-        play: "\ue768"
-        pause: "\ue769"
+        play: "\uf04b"
+        pause: "\uf04c"
+        prev_track: "\uf048"
+        next_track: "\uf051"
+      media_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: 'normal'
+        border_color: 'System'
+        alignment: 'right'
+        direction: 'down'
+        thumbnail_size: 120
+      media_menu_icons:
+        play: "\uf04b"
+        pause: "\uf04c"
+        prev_track: "\uf048"
+        next_track: "\uf051"
+      label_shadow:
+        enabled: true
+        color: 'black'
+        radius: 3
+        offset: [1, 1]
   active_window:
-    type: "yasb.active_window.ActiveWindowWidget"
+    type: 'yasb.active_window.ActiveWindowWidget'
     options:
-      label: "{win[title]}"
-      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
-      label_no_window: ""
-      label_icon: true
+      label: '{win[title]}'
+      label_alt: '{win[process][name]}'
+      label_no_window: ''
+      label_icon: false
       label_icon_size: 14
       max_length: 56
-      max_length_ellipsis: "..."
-      monitor_exclusive: false
+      max_length_ellipsis: '...'
+      monitor_exclusive: true
   clock:
-    type: "yasb.clock.ClockWidget"
+    type: 'yasb.clock.ClockWidget'
     options:
-      label: "{%a, %d %b %H:%M}"
-      label_alt: "{%A, %d %B %Y %H:%M:%S}"
+      label: '{%a %d %b  %H:%M}'
+      locale: 'pt_BR'
       timezones: []
-  komorebi_workspaces:
-    type: "komorebi.workspaces.WorkspaceWidget"
-    options:
-      label_offline: "\u23fc Offline"
-      label_workspace_btn: "\udb81\udc3d"
-      label_workspace_active_btn: ""
-      label_workspace_populated_btn: "\udb81\udc3e"
-      label_default_name: "{index}"
-      label_zero_index: false
-      hide_empty_workspaces: false
-      hide_if_offline: true
-      animation: true
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
-  komorebi_active_layout:
-    type: "komorebi.active_layout.ActiveLayoutWidget"
-    options:
-      hide_if_offline: true
-      label: "{icon}"
-      layouts:
-        [
-          "bsp",
-          "columns",
-          "rows",
-          "grid",
-          "vertical_stack",
-          "horizontal_stack",
-          "ultrawide_vertical_stack",
-          "right_main_vertical_stack",
-        ]
-      layout_icons:
-        bsp: "BSP"
-        columns: "COLS"
-        rows: "ROWS"
-        grid: "GRID"
-        vertical_stack: "V-STACK"
-        horizontal_stack: "H-STACK"
-        ultrawide_vertical_stack: "W-STACK"
-        right_main_vertical_stack: "RMV-STACK"
-        monocle: "MONOCLE"
-        maximised: "MAX"
-        floating: "FLOATING"
-        paused: "PAUSED"
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
+      #timezones: ["America/Montreal"]
       callbacks:
-        on_left: "next_layout"
-        on_middle: "toggle_monocle"
-        on_right: "prev_layout"
-  volume:
-    type: "yasb.volume.VolumeWidget"
+        on_right: 'toggle_calendar'
+      calendar:
+        blur: True
+        round_corners: True
+        round_corners_type: 'normal'
+        border_color: 'System'
+        alignment: 'center'
+        direction: 'down'
+  weather:
+    type: 'yasb.weather.WeatherWidget'
     options:
-      label: "<span>{icon}</span> {level}"
-      label_alt: "{volume}"
+      callbacks:
+        on_left: 'toggle_card'
+      label: '<span>{icon}</span> {temp}'
+      label_alt: '{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}'
+      api_key: '445eb3da94c348dfab9221737252707' # Get your free API key from https://www.weatherapi.com/
+      update_interval: 600 # Update interval in seconds, Min 600 seconds
+      hide_decimal: true
+      location: 'Jaú'
+      icons:
+        sunnyDay: "\ue30d"
+        clearNight: "\ue32b"
+        cloudyDay: "\udb81\udd99"
+        cloudyNight: "\ue311"
+        rainyDay: "\udb81\ude7e"
+        rainyNight: "\udb81\ude7e"
+        snowyIcyDay: "\udb81\udd98"
+        snowyIcyNight: "\udb81\udd98"
+        blizzardDay: "\uebaa"
+        default: "\uebaa"
+  volume:
+    type: 'yasb.volume.VolumeWidget'
+    options:
+      label: '{icon}'
       volume_icons:
         - "\ueee8" # Icon for muted
         - "\uf026" # Icon for 0-10% volume
@@ -146,76 +134,33 @@ widgets:
         - "\uf027" # Icon for 31-60% volume
         - "\uf028" # Icon for 61-100% volume
       callbacks:
-        on_right: "exec cmd.exe /c start ms-settings:sound"
-  power_menu:
-    type: "yasb.power_menu.PowerMenuWidget"
+        on_left: 'toggle_volume_menu'
+      audio_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: 'rounded'
+        alignment: 'center'
+        direction: 'down'
+      animation:
+        enabled: true
+        type: 'fade'
+        duration: 100
+  home:
+    type: 'yasb.home.HomeWidget'
     options:
-      label: "\uf011"
-      uptime: True
-      blur: False
-      blur_background: True
-      animation_duration: 200 # Milisecond
-      button_row: 5 # Number of buttons in row, min 1 max 5
-      buttons:
-        shutdown: ["\uf011", "Shut Down"]
-        restart: ["\uead2", "Restart"]
-        signout: ["\udb80\udf43", "Sign out"]
-        hibernate: ["\uf28e", "Hibernate"]
-        sleep: ["\u23fe", "Sleep"]
-        cancel: ["", "Cancel"]
-  apps:
-    type: "yasb.applications.ApplicationsWidget"
-    options:
+      label: "\ue62a"
+      menu_list:
+        - { title: 'User Home', path: '~' }
+        - { title: 'Download', path: "~\\Downloads" }
+        - { title: 'Documents', path: "~\\Documents" }
+        - { title: 'Pictures', path: "~\\Pictures" }
+      system_menu: true
+      power_menu: true
+      blur: true
+      border_color: 'System'
+      round_corners_type: 'normal'
       container_padding:
         top: 0
-        left: 8
+        left: 6
         bottom: 0
-        right: 8
-      label: "{data}"
-      app_list:
-        - { icon: "\uf422", launch: "launcher" }
-        - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
-        - { icon: "\uf489", launch: "wt" }
-        - { icon: "\uf1ff",launch: "C:\\ProgramData\\gabri\\Discord\\Update.exe --processStart Discord.exe" }
-        - { icon: "\udb80\ude39",launch: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" }
-        - { icon: "\udb82\ude1e",launch: "C:\\Users\\gabri\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe" }
-        - { icon: "\udb81\ude10",launch: "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.exe" }
-  taskbar:
-    type: "yasb.taskbar.TaskbarWidget"
-    options:
-      animation: true
-      icon_size: 16
-      ignore_apps:
-        processes: []
-        titles: []
-        classes: []
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
-  ai:
-    type: "yasb.custom.CustomWidget"
-    options:
-      label: "<span>\udb81\ude74</span>"
-      label_alt: "\udb81\ude74"
-      class_name: "ai-widget"
-      callbacks:
-        on_left: "exec cmd.exe /c start \"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" https://chatgpt.com"
-  whkd:
-    type: "yasb.whkd.WhkdWidget"
-    options:
-      label: "<span>\uf11c</span>"
-  obs:
-    type: "yasb.obs.ObsWidget"
-    options:
-      connection:
-        host: "192.168.1.2"
-        port: 4455
-        password: "123456"
-      icons:
-        recording: "\ueba7"
-        stopped: "\ueba5"
-        paused: "\ueba7"
-      hide_when_not_recording: true
-      blinking_icon: true
+        right: 12
