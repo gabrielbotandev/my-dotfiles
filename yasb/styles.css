@@ -1,360 +1,275 @@
-:root {
-    --rosewater: #f5e0dc;
-    --flamingo: #f2cdcd;
-    --pink: #f5c2e7;
-    --mauve: #cba6f7;
-    --red: #f38ba8;
-    --maroon: #eba0ac;
-    --peach: #fab387;
-    --yellow: #f9e2af;
-    --green: #a6e3a1;
-    --teal: #94e2d5;
-    --sky: #89dceb;
-    --sapphire: #74c7ec;
-    --blue: #89b4fa;
-    --lavender: #b4befe;
-    --text: #cdd6f4;
-    --subtext1: #bac2de;
-    --subtext0: #a6adc8;
-    --overlay2: #9399b2;
-    --overlay1: #7f849c;
-    --overlay0: #6c7086;
-    --surface2: #585b70;
-    --surface1: #45475a;
-    --surface0: #282936;
-    --base: #1e1e2e;
-    --mantle: rgba(24, 24, 37, 0.5);
-    --crust: rgba(17, 17, 27, 0.5);
-}
-*{
-	font-size: 12px;
-	color: var(--subtext0);
-	font-weight: 600;
-	font-family: "JetBrainsMono NFP";
-	margin: 0;
-	padding: 0;
+* {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: 'Segoe UI', 'JetBrainsMono NFP';
+  margin: 0;
+  padding: 0;
 }
 .yasb-bar {
-	padding: 0;
-	margin: 0; 
-    background-color: var(--mantle)
+  padding: 0 8px;
+  margin: 0;
+  background-color: rgba(25, 25, 25, 0.3);
 }
 .widget {
-	padding: 0 12px;
-	margin: 0;
-}
-.icon {
-	font-size: 16px;
+  padding: 0 8px;
+  margin: 0;
 }
 .widget .label {
-	padding: 0px 2px; 
+  padding: 0px 2px 2px 2px;
 }
-
-.clock-widget {
-	border-top-left-radius: 14px;
-	border-bottom-left-radius: 14px;
+.widget .label.alt {
+  padding: 1px 8px 1px 8px;
 }
 .apps-widget {
-	padding: 0 4px 0 2px;
+  padding: 0;
 }
-.komorebi-active-layout {
-	padding: 0 4px 0 0;
-}
-.komorebi-active-layout .label {
-	font-weight: 600;
-	padding: 2px 0 0 0;
-}
-.apps-widget .widget-container,
-.komorebi-workspaces .widget-container,
-.komorebi-active-layout .widget-container{
-	background-color: var(--crust);
-	margin: 4px 0 4px 0;
-	border-radius: 12px;
-    border: 0px solid var(--surface1);
-}
-.komorebi-workspaces .widget-container {
-    border-top-left-radius: 6px;
-	border-bottom-left-radius: 6px;
-    margin-left: 4px;
-}
-.komorebi-workspaces {
-	border-top-right-radius: 14px;
-	border-bottom-right-radius: 14px;
-	padding: 0 4px 0 0;
-}
-.komorebi-workspaces .offline-status {
-    color: var(--surface2);
-    font-size: 12px;
-    padding: 0 0 0 4px;
-    font-weight:600;
-}
-.komorebi-workspaces .ws-btn {
-    border: none;
-    background-color:transparent;
-	margin:0;
-    font-size: 12px;
-	color:  var(--overlay1);
-    height: 28px;
-    width: 18px;
-}
-.komorebi-workspaces .ws-btn:hover {
-    color: var(--subtext1);
-}
-.komorebi-workspaces .ws-btn.populated {
-    color:transparent;
-    width: 10px;
-    height: 10px;
-    background-color: var(--sapphire);
-    border-radius: 5px;
-    margin: 0 4px;
-    font-size: 1px;
-}
-.komorebi-workspaces .ws-btn.active {
-	color: transparent;
-    background-color: var(--subtext0);
-    width: 36px;
-    height: 10px;
-    margin: 0 4px;
-    border-radius: 5px; 
+.apps-widget .widget-container {
+  background-color: transparent;
 }
 .apps-widget .label {
-	font-size: 14px;
-	padding: 0 2px;
-    color: var(--subtext0);
+  font-size: 14px;
+  padding: 0px 2px 1px 2px;
+  margin: 0 8px;
 }
 .apps-widget .label:hover {
-	color: var(--text);
+  color: #fff;
 }
-.uptime {
-	font-size: 14px;
-	margin-bottom: 10px;
-	color: var(--surface2);
-	font-weight: 600;
- 
+.active-window-widget .icon {
+  padding: 0 0 0 0;
 }
-.power-menu-widget .label {
-	color: var(--subtext0);
-	font-size: 13px;
-}
-.power-menu-popup {
-	background-color: transparent	 
-}
-.power-menu-popup .button {
-	padding: 0;
-	width: 180px;
-	height: 230px;
-	border-radius: 8px;
-	background-color: var(--base);
-	color:var(--text);
-	border-left: 4px solid rgba(58, 59, 83, 0);
-    border-right: 4px solid rgba(58, 59, 83, 0);
-    border-top: 8px solid rgba(58, 59, 83, 0);
-    border-bottom: 8px solid rgba(58, 59, 83, 0);
-	margin: 0px;
-}
-.power-menu-popup .button.hover {
-	background-color:var(--surface0);
-	border-left: 4px solid var(--surface0);
-    border-right: 4px solid var(--surface0);
-    border-top: 8px solid var(--surface0);
-    border-bottom: 8px solid var(--surface0);
-}
-.power-menu-popup .button .label {
-	margin-bottom: 8px;
-	font-size: 16px;
-	font-weight: 500;
-	color: var(--surface2)
- 
-}
-.power-menu-popup .button .icon {
-	font-size: 64px;
-	padding-top: 32px;
-	color: var(--surface2)
-}
-.power-menu-popup .button.cancel .icon {
-    padding: 0;
-    margin: 0;
-}
-.power-menu-popup .button.cancel .label {
-	color: var(--red);
-    margin: 0;
-}
-.power-menu-popup .button.cancel {
-    height: 32px;
-    border-radius: 4px;
-}
-.volume-widget .icon {
-	color: var(--subtext0);
-	margin: 1px 2px 0 0;
-}
-.volume-widget .icon:hover {
-	color: var(--text);
-}
-.github-widget .icon {
-    font-size: 14px;
-	color: var(--text)
-}
-.github-widget .icon.new-notification {
-    color: var(--red);
-}
-.weather-widget,
-.github-widget,
-.volume-widget {
-    padding:0 6px;
-}
-.weather-widget .icon {
-	font-size: 18px;
-	margin: 0 2px 1px 0;
-    color: var(--yellow);
-}
-.media-widget {
-	padding: 0;
-	margin: 0;
-    border-radius: 0;
-}
-.media-widget .label {
-	color: var(--subtext0);
-	background-color: rgba(24, 24, 37, 0.7);
-    padding: 0px;
-	padding-right: 4px;
-	font-size: 12px;
-}
-.media-widget .label.maintext {
-    padding-top: 3px;
-}
-.media-widget .btn {
-	color: var(--subtext0);
-	padding:0 1px;
-	margin: 0;
-	font-family: Segoe Fluent Icons;
-    font-weight: 400;
-}
-.media-widget .btn:hover {
-	color: var(--text);
-}
-.media-widget .btn.play {
-	font-size: 16px;
-}
-.media-widget .btn.disabled:hover,
-.media-widget .btn.disabled {
-	color: #4e525c;
-	font-size: 12px;
-	background-color: rgba(0, 0, 0, 0);
-}
-.ai-widget {
-	padding: 0 4px 0 4px;
-    margin: 0;
-}
-.ai-widget .widget-container
- {
- 	margin: 4px 0 4px 0;
-	border-radius: 12px;
-}
-.ai-widget .icon {
-	color: var(--subtext0);
-	padding: 0 5px;
-    font-size: 16px;
-	margin: 0;
-}
-.ai-widget .icon:hover {
-	color: var(--text);
-}
-.taskbar-widget{
-    padding: 0;
-    margin: 0;
-    border: none;
-}
-.taskbar-widget .app-icon{
-    padding:0 6px;
-    border: none;
-    margin: 0;
-}
-.obs-widget  {
-    padding: 0 5px;
-}
-.obs-widget .recording {
-    font-size: 18px;
-    color: #ff3b3b;
-}
-.obs-widget .paused {
-    font-size: 18px;
-    color:var(--yellow);
-}
-.obs-widget .stopped {
-    font-size: 18px;
-    color: #756e70;
-}
-.whkd-widget {
-    padding: 0 6px 0 6px;
-}
-.whkd-widget .icon {
-    color: var(--subtext0);
-    font-size: 14px;
-}
-.whkd-widget .icon:hover {
-    color: var(--text);
-}
-.wallpapers-widget {
-    padding: 0 6px 0 6px;
-}
-.wallpapers-gallery-window {
-    background-color: rgba(85, 42, 240, 0.01);
-    border: 0;
-    margin: 0;
-}
-.wallpapers-gallery-buttons {
-    background-color:rgba(255, 255, 255, 0);
-    color:var(--text);
-    border: none;
-    font-size: 14px;
-    padding: 8px 0;
-    border-radius: 8px;
-    margin:0 8px 8px 8px;
-    width: 600px;
-}
-.wallpapers-gallery-buttons:hover {
-    background-color:rgba(255, 255, 255, 0.1)
-}
-.wallpapers-gallery-image {
-    border: 4px solid transparent;
-    border-radius: 10px;
- 
-}
-.wallpapers-gallery-image:hover {
-    border: 4px solid var(--sapphire);
-}
-.wallpapers-gallery-image.focused {
-    border: 4px solid var(--sapphire);
+/* ACTIVE WINDOW WIDGET */
+.active-window-widget .label {
+  font-weight: 800;
+  margin: 0;
 }
 
-.update-check-widget {
-    padding: 0 0px 0 0px;
+/* WEATHER WIDGET */
+.weather-widget .icon {
+  font-size: 16px;
+  margin: 0 2px 1px 0;
 }
-.update-check-widget .icon {
-    font-size: 14px;
+.weather-widget .icon.sunnyDay {
+  color: white;
 }
-.update-check-widget .widget-container.winget,
-.update-check-widget .widget-container.windows {
-    background: var(--maroon);
-    margin: 7px 2px 7px 2px;
-    border-radius: 9px;
-    border: 2px solid var(--red);
+.weather-widget .icon.clearNight {
+  color: white;
+  font-size: 22px;
+  margin: 1px 2px 0px 0;
 }
-.update-check-widget .widget-container.windows {
-    background: var(--lavender);
-    margin: 7px 2px 7px 2px;
-    border-radius: 9px;
-    border: 2px solid var(--blue);
+
+/* MEDIA WIDGET */
+
+.media-widget .label {
+  color: #bac2db;
+  padding: 0px;
+  padding-right: 4px;
+  font-size: 12px;
 }
-.update-check-widget .widget-container.winget .icon,
-.update-check-widget .widget-container.windows .icon {
-    color: var(--base);
-    margin: 0 1px 0 6px;
+.media-widget .btn {
+  padding: 0 4px;
+  margin-right: 5px;
 }
-.update-check-widget .widget-container.winget .label,
-.update-check-widget .widget-container.windows .label {
-    margin: 0 6px 0 1px;
-    color: var(--base);
-    font-weight: 900;
-    font-size: 14px;
-} 
+.media-widget .btn:hover {
+  color: #babfd3;
+}
+.media-widget .btn.play {
+  font-size: 16px;
+}
+.media-menu {
+  min-width: 420px;
+  max-width: 420px;
+  background-color: rgba(36, 36, 36, 0.604);
+}
+.media-menu .title,
+.media-menu .artist,
+.media-menu .source {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.media-menu .artist {
+  font-size: 13px;
+  color: #6c7086;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+.media-menu .source {
+  font-size: 12px;
+  color: #000;
+  font-weight: normal;
+  border-radius: 3px;
+  background-color: #bac2de;
+  padding: 2px 4px;
+  margin-top: 10px;
+}
+/* The source class name is the same as what you see in the media widget; just replace spaces with dashes and convert it to lowercase. 
+Example: "Windows Media" becomes "windows-media" */
+.media-menu .source.spotify {
+  background-color: #199143;
+  color: #ffffff;
+}
+.media-menu .source.windows-media {
+  background-color: #0078d4;
+  color: #ffffff;
+}
+
+.media-menu .btn {
+  font-size: 18px;
+  margin: 10px 2px 0px 2px;
+  min-width: 35px;
+  max-width: 35px;
+  min-height: 35px;
+  max-height: 35px;
+  border-radius: 8px;
+}
+.media-menu .btn.prev {
+  margin-left: 10px;
+}
+.media-menu .btn:hover {
+  color: #babfd3;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.media-menu .btn.disabled:hover,
+.media-menu .btn.disabled {
+  color: #4e525c;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.media-menu .playback-time {
+  font-size: 13px;
+  color: white;
+  margin-top: 20px;
+  min-width: 100px;
+}
+.media-menu .progress-slider {
+  height: 10px;
+  margin: 5px 4px;
+  border-radius: 3px;
+}
+.media-menu .progress-slider::groove {
+  background: transparent;
+  height: 2px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.media-menu .progress-slider::groove:hover {
+  background: transparent;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.media-menu .progress-slider::sub-page {
+  background: white;
+  border-radius: 3px;
+  height: 4px;
+}
+
+/* HOME MENU */
+
+.home-widget {
+  padding: 0;
+}
+.home-widget .icon:hover {
+  color: #babfd3;
+}
+.home-menu {
+  background-color: rgba(36, 36, 36, 0.604);
+}
+.home-menu .menu-item {
+  padding: 8px 48px 9px 16px;
+  font-size: 12px;
+  font-family: 'Segoe UI';
+  color: white;
+  font-weight: 600;
+}
+.home-menu .menu-item:hover {
+  background-color: rgba(157, 180, 141, 0.116);
+  color: #fff;
+}
+.home-menu .separator {
+  max-height: 1px;
+  background-color: rgba(157, 180, 141, 0.116);
+}
+
+/* VOLUME WIDGET */
+
+.volume-widget {
+  margin-top: 2px;
+}
+.volume-widget .label {
+  font-size: 16px;
+}
+.volume-slider {
+  border: none;
+}
+.audio-menu {
+  background-color: rgba(17, 17, 27, 0.4);
+}
+.audio-container .device {
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px 6px 4px;
+  margin: 2px 0;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.audio-container .device.selected {
+  background-color: rgba(255, 255, 255, 0.085);
+}
+.audio-container .device:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+/*CLOCK - CALENDAR WIDGET DROPDOWN*/
+
+.calendar {
+  background-color: rgba(36, 36, 36, 0.604);
+  padding: 10px 25px 10px 0px;
+}
+
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+  background-color: transparent;
+  color: white;
+  font-family: 'Segoe UI';
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.calendar .calendar-table::item:selected {
+  background-color: #babfd3;
+  color: #153647;
+}
+
+.calendar .day-label,
+.calendar .month-label,
+.calendar .date-label {
+  font-family: 'Segoe UI';
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  min-width: 180px;
+  max-width: 180px;
+}
+.calendar .month-label {
+  font-weight: normal;
+}
+.calendar .date-label {
+  font-size: 88px;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+  margin-top: -20px;
+}
+
+/*TOOLTIPS*/
+
+QToolTip {
+  padding: 4px;
+  color: white;
+  font-size: 12px;
+  background-color: rgb(36, 36, 36);
+}
