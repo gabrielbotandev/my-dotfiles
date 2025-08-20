@@ -41,8 +41,8 @@
   // Window --------------------------------------------------------------------
   "window.newWindowProfile": "Default",
   "window.menuBarVisibility": "hidden",
-  "window.title": "${appName}",
-  "window.commandCenter": true,
+  "window.title": "${folderName}${separator}${activeRepositoryBranchName}",
+  "window.titleSeparator": " ",
   // Terminal ------------------------------------------------------------------
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "400",
