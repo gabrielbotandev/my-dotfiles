@@ -17,10 +17,6 @@
   .titlebar-center {
     margin: 0 !important;
   }
-  /* arrow buttons */
-  .action-item.menu-entry {
-    display: none !important;
-  }
   /* whole title bar command center container */
   .action-item.command-center-center {
     background-color: transparent !important;
