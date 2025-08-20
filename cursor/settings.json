@@ -21,6 +21,7 @@
   "breadcrumbs.enabled": false,
   // Editor --------------------------------------------------------------------
   "editor.fontLigatures": true,
+  "editor.fontFamily": "Lilex",
   "editor.fontSize": 14,
   "editor.fontWeight": "400",
   "editor.lineHeight": 1.8,
@@ -38,28 +39,29 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
-  // Window --------------------------------------------------------------------
+  // Window ------------------------------------------------------------------
   "window.newWindowProfile": "Default",
   "window.menuBarVisibility": "hidden",
   "window.title": "${folderName}${separator}${activeRepositoryBranchName}",
   "window.titleSeparator": " ",
-  // Terminal ------------------------------------------------------------------
+  // Terminal ----------------------------------------------------------------
   "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Lilex",
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.cursorStyle": "underline",
   "terminal.integrated.cursorWidth": 2,
   "terminal.integrated.env.windows": {},
   "terminal.integrated.gpuAcceleration": "off",
-  // Autosave ------------------------------------------------------------------
+  // Autosave ----------------------------------------------------------------
   "files.autoSave": "afterDelay",
-  // Live server extension -----------------------------------------------------
+  // Live server Extension ---------------------------------------------------
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
-  // Git -----------------------------------------------------------------------
+  // Git ---------------------------------------------------------------------
   "git.openRepositoryInParentFolders": "never",
   "git.enableSmartCommit": true,
   "git.autofetch": true,
-  // Formatter -----------------------------------------------------------------
+  // Formatter ---------------------------------------------------------------
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -74,8 +76,11 @@
   },
   "prettier.semi": false,
   "prettier.singleQuote": true,
-  // Codesnap ------------------------------------------------------------------
+  // Codesnap ----------------------------------------------------------------
   "codesnap.showLineNumbers": false,
-  // Custom CSS - Extension: be5invis.vscode-custom-css ------------------------
-  "vscode_custom_css.imports": ["file:///C:/Users/user/Documents/custom.css"]
+  // Custom CSS - Extension: be5invis.vscode-custom-css ----------------------
+  "vscode_custom_css.imports": [
+    "file:///Users/gabrielbotan/Documents/custom.css"
+  ],
+  "symbols.hidesExplorerArrows": false
 }
