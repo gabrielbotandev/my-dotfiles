@@ -10,13 +10,13 @@
   "workbench.editor.labelFormat": "short",
   "workbench.statusBar.visible": true,
   "workbench.tree.indent": 12,
-  "workbench.panel.showLabels": false,
   "workbench.colorTheme": "Ayu Mirage Zed", // by "Enhanced Jax"
   "workbench.navigationControl.enabled": false,
   "workbench.editor.enablePreview": false,
   "workbench.productIconTheme": "jetbrains-product-icon-theme", // by "fogio"
   "workbench.editor.empty.hint": "hidden",
   "workbench.activityBar.location": "top",
+  "workbench.panel.showLabels": false,
   "workbench.layoutControl.enabled": false,
   "breadcrumbs.enabled": false,
   // Editor --------------------------------------------------------------------
@@ -34,12 +34,15 @@
   "editor.parameterHints.enabled": false,
   "editor.rulers": [80, 120],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
   // Window --------------------------------------------------------------------
-  "window.commandCenter": false,
-  "window.menuBarVisibility": "toggle",
+  "window.newWindowProfile": "Default",
+  "window.menuBarVisibility": "hidden",
+  "window.title": "${appName}",
+  "window.commandCenter": true,
   // Terminal ------------------------------------------------------------------
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "400",
@@ -49,27 +52,13 @@
   "terminal.integrated.gpuAcceleration": "off",
   // Autosave ------------------------------------------------------------------
   "files.autoSave": "afterDelay",
-  // Live server extension ---------------------------------------------------------------
+  // Live server extension -----------------------------------------------------
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
   // Git -----------------------------------------------------------------------
   "git.openRepositoryInParentFolders": "never",
   "git.enableSmartCommit": true,
   "git.autofetch": true,
-  // GitHub Copilot ------------------------------------------------------------
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false,
-    "javascript": true
-  },
-  // Security ------------------------------------------------------------------
-  "security.workspace.trust.untrustedFiles": "open",
-  "security.workspace.trust.enabled": true,
-  // Symbols -------------------------------------------------------------------
-  "symbols.hidesExplorerArrows": false,
   // Formatter -----------------------------------------------------------------
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

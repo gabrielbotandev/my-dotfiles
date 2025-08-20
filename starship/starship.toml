@@ -5,7 +5,7 @@ continuation_prompt = '▶▶ '
 format = """
 $username\
 $hostname\
-$directory\
+$directory\  
 $git_branch\
 $git_commit\
 $git_state\
@@ -22,11 +22,11 @@ disabled = false
 
 
 [username]
-style_user = 'white bold'
+style_user = 'bright-white bold'
 style_root = 'bright-red bold'
 format = '[$user]($style) '
 disabled = false
-show_always = false
+show_always = true
 
 [directory]
 style = "bright-purple"

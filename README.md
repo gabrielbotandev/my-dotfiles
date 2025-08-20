@@ -1,230 +1,370 @@
-# Configurações de Terminal Personalizado
+# My Dotfiles 🚀
 
-Este repositório contém minhas configurações do **Windows Terminal**, incluindo o uso do **PowerShell 7**, temas, fontes e ferramentas personalizadas. Aqui você encontrará instruções para replicar meu ambiente de desenvolvimento.
+A collection of my personal dotfiles and configurations for Windows development environment. This repository contains configurations for various tools and applications I use daily to create a productive and beautiful development setup.
 
-## Índice
-1. [Instalação de Gerenciadores de Pacotes](#1-instalação-de-gerenciadores-de-pacotes)
-   - [Instalação do Chocolatey](#11-instalando-o-chocolatey)
-   - [Instalação do Scoop](#12-instalando-o-scoop)
-2. [Instalando Pacotes com Chocolatey e Scoop](#2-instalando-pacotes-com-chocolatey-e-scoop)
-   - [Instalando Pacotes](#21-instalando-pacotes)
-   - [Configurando o LSD](#22-configurando-o-lsd)
-3. [Instalação do PowerShell 7](#3-instalando-o-powershell-7)
-4. [Instalação de Nerd Fonts](#4-instalando-nerd-fonts)
-5. [Configuração de Cores no Windows Terminal](#5-configurando-cores-no-windows-terminal)
-   - [Configurar cores no `.json`](#51-configurar-cores-no-json)
-6. [Criando ou Usando um $PROFILE no PowerShell](#6-criando-ou-usando-um-profile-do-powershell)
-7. [Instalação e Configuração do Oh-My-Posh](#7-instalando-e-usando-oh-my-posh)
-8. [Instalação e Configuração do Starship](#8-instalando-configurando-e-usando-o-starship)
-9. [Instalação e Configuração do posh-git](#9-instalando-e-configurando-o-posh-git)
-10. [Instalação e Configuração do yasb](#10-instalando-e-configurando-o-yasb)
-11. [Instalação e Configuração do komorebi](#11-instalando-e-configurando-o-komorebi)
+## ⚠️ Important Note
 
----
+**This repository currently contains ONLY my Windows dotfiles. My macOS configurations are not included yet and will be added in a future update.**
 
-## 1. Instalação de Gerenciadores de Pacotes
+## 🛠️ Tools & Applications
 
-Primeiro, vamos instalar alguns gerenciadores de pacotes essenciais para facilitar o gerenciamento de ferramentas no Windows.
+### Terminal Setup
 
-### 1.1. Instalando o Chocolatey
+- **Warp** - Modern terminal with AI capabilities
+- **PowerShell 7** - Cross-platform shell
+- **Oh My Posh** - Custom prompt engine for PowerShell
+- **Starship** - Cross-shell prompt (alternative to Oh My Posh)
+- **lsd** - Modern `ls` replacement with colors and icons
 
-O **Chocolatey** é um gerenciador de pacotes para Windows. Para instalá-lo:
+### Window Management
 
-1. Abra o Windows Terminal como Administrador.
-2. Execute o seguinte comando:
+- **Komorebi** - Tiling window manager for Windows
+- **YASB** - Yet Another Status Bar
 
-   ```powershell
-   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-   ```
+### Code Editors
 
-### 1.2. Instalando o Scoop
+- **Cursor** - AI-powered code editor
+- **VS Code** - Popular code editor
+- **Neovim** - Modern Vim editor with plugin ecosystem
+- **Custom CSS and JS Loader** - Extension for custom styling
 
-O **Scoop** é uma alternativa de gerenciamento de pacotes, focada em simplificar a instalação de programas no Windows.
+### Themes & Styling
 
-1. Execute o seguinte comando no Windows Terminal:
-   
-   ```powershell
-   Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-   ```
+- **Ayu Mirage Zed** - Theme inspired by Zed editor
+- **JetBrains Product Icons** - Clean icon theme
 
-## 2. Instalando Pacotes com Chocolatey e Scoop
+## 📦 Installation Guide
 
-Após instalar o **Chocolatey** e o **Scoop**, você pode instalar pacotes essenciais. 
+### 1. Terminal Setup
 
-### 2.1. Instalando Pacotes
-
-Use o Chocolatey para instalar alguns pacotes comuns:
+#### Install Warp
 
 ```powershell
-choco install lsd git
+# Using winget
+winget install Warp.Warp
+
+# Or download from https://warp.dev/
 ```
 
-Ou, usando o Scoop:
+#### Install PowerShell 7
 
 ```powershell
-scoop install lsd git
+# Using winget
+winget install Microsoft.PowerShell
+
+# Or using Chocolatey
+choco install powershell-core
 ```
 
-### 2.2. Configurando o LSD
-
-Para configurar o `lsd`, uma alternativa ao `ls` com recursos visuais adicionais:
-
-1. Crie e edite o arquivo `config.yaml` com o comando:
-   
-   ```powershell
-   notepad $HOME\.config\lsd\config.yaml
-   ```
-
-Para mais informações, acesse o [repositório oficial do lsd](https://github.com/lsd-rs/lsd).
-
-## 3. Instalando o PowerShell 7
-
-Para instalar o **PowerShell 7** no Windows:
-
-1. Acesse a [página de lançamentos do PowerShell no GitHub](https://github.com/PowerShell/PowerShell/releases).
-2. Baixe o instalador mais recente para Windows (arquivo `.msi`).
-3. Execute o instalador e siga as instruções na tela.
-
-**Alternativa usando Scoop**:
+#### Install Oh My Posh
 
 ```powershell
-scoop install pwsh
+# Using winget
+winget install JanDeDobbeleer.OhMyPosh
+
+# Or using Chocolatey
+choco install oh-my-posh
 ```
 
-## 4. Instalando Nerd Fonts
-
-As **Nerd Fonts** incluem ícones para enriquecer sua experiência no terminal.
-
-1. Acesse a [página oficial no GitHub](https://github.com/ryanoasis/nerd-fonts#installing).
-2. Siga as instruções para instalar sua fonte preferida.
-3. Abra o Windows Terminal e configure a fonte em:
-
-   ```
-   Configurações > PowerShell > Aparência > Tipo de Fonte > Nerd Font
-   ```
-
-**Alternativa usando Scoop**:
+#### Install Starship (Alternative to Oh My Posh)
 
 ```powershell
-scoop bucket add nerd-fonts
-scoop install JetBrains-Mono-NF
-```
+# Using winget
+winget install Starship.Starship
 
-## 5. Configurando Cores no Windows Terminal
-
-Para configurar cores no Windows Terminal com PowerShell 7:
-
-1. Abra o Windows Terminal.
-2. Clique na seta ao lado de uma aba e selecione "Configurações".
-3. Vá até "esquema de cores" e selecione seu tema preferido.
-4. Salve as alterações.
-
-### 5.1. Configurar cores no `.json`
-
-1. Em "Configurações", selecione "Abrir o arquivo JSON".
-2. Procure o parâmetro `"schemes"` e personalize as cores de acordo com sua preferência.
-3. Salve as alterações e reinicie o terminal.
-
-## 6. Criando ou Usando um $PROFILE no PowerShell
-
-Para criar ou editar seu perfil no PowerShell:
-
-1. Abra o PowerShell e execute:
-   
-   ```powershell
-   notepad $PROFILE
-   ```
-
-2. Adicione suas personalizações, como aliases ou funções.
-
-## 7. Instalando e Usando Oh-My-Posh
-
-O **Oh-My-Posh** é um gerenciador de temas para o PowerShell. Para instalá-lo:
-
-1. Execute no PowerShell:
-
-   ```powershell
-   choco install oh-my-posh
-   ```
-
-**Alternativa usando Scoop**:
-
-```powershell
-scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
-```
-
-2. Adicione a inicialização ao `$PROFILE`:
-
-   ```powershell
-   oh-my-posh init pwsh --config '$HOME\AppData\Local\Programs\oh-my-posh\themes\theme.omp.json' | Invoke-Expression
-   ```
-
-## 8. Instalando, Configurando e Usando o Starship
-
-O **Starship** é um prompt minimalista. Para instalá-lo:
-
-1. Execute no PowerShell:
-
-   ```powershell
-   winget install starship
-   ```
-
-**Alternativa usando Chocolatey**:
-
-```powershell
+# Or using Chocolatey
 choco install starship
 ```
 
-2. Adicione ao `$PROFILE`:
+#### Install lsd
 
-   ```powershell
-   starship init powershell | Out-String | Invoke-Expression
+```powershell
+# Using winget
+winget install Peltoche.lsd
+
+# Or using Chocolatey
+choco install lsd
+```
+
+### 2. PowerShell Modules
+
+Install required PowerShell modules:
+
+```powershell
+Install-Module -Name Terminal-Icons -Repository PSGallery
+Install-Module -Name PSReadLine -Repository PSGallery
+```
+
+### 3. Window Management
+
+#### Install Komorebi
+
+```powershell
+# Using winget
+winget install LGUG2Z.Komorebi
+
+# Or using Chocolatey
+choco install komorebi
+```
+
+#### Install YASB
+
+```powershell
+# Using winget
+winget install LGUG2Z.YASB
+
+# Or using Chocolatey
+choco install yasb
+```
+
+### 4. Code Editor Setup
+
+#### Install Neovim
+
+```powershell
+# Using winget
+winget install Neovim.Neovim
+
+# Or using Chocolatey
+choco install neovim
+
+# Or download from https://neovim.io/
+```
+
+#### Install Neovim Dependencies
+
+```powershell
+# Install Node.js (required for CoC)
+winget install OpenJS.NodeJS
+
+# Install Yarn (for CoC extensions)
+npm install -g yarn
+
+# Install vim-plug (plugin manager)
+# Create the autoload directory
+New-Item -ItemType Directory -Path "$env:LOCALAPPDATA\nvim\autoload" -Force
+
+# Download vim-plug
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" -OutFile "$env:LOCALAPPDATA\nvim\autoload\plug.vim"
+```
+
+#### Install Custom CSS and JS Loader Extension
+
+For both Cursor and VS Code:
+
+1. Open the Extensions panel (Ctrl+Shift+X)
+2. Search for "Custom CSS and JS Loader"
+3. Install the extension by `be5invis`
+
+#### Apply Custom Styling
+
+1. Copy the `custom.css` file from either `cursor/` or `vscode/` folder to your Documents folder
+2. Update the path in your settings.json:
+   ```json
+   "vscode_custom_css.imports": ["file:///C:/Users/YOUR_USERNAME/Documents/custom.css"]
+   ```
+3. Reload the editor (Ctrl+Shift+P → "Developer: Reload Window")
+
+## 🔧 Configuration Files
+
+### Neovim Configuration
+
+- **Location**: `nvim/init.vim`
+- **Plugin Manager**: vim-plug
+- **Key Features**:
+  - **CoC (Conquer of Completion)** - Advanced autocompletion with language servers
+  - **NERDTree** - File explorer (Ctrl+F, Ctrl+N, Ctrl+T)
+  - **vim-airline** - Enhanced status bar with Powerline symbols
+  - **vim-devicons** - File type icons
+  - **Tagbar** - Code navigation and structure (F8)
+  - **vim-surround** - Surround text with brackets/quotes
+  - **vim-commentary** - Easy commenting (gcc, gc)
+  - **vim-multiple-cursors** - Multiple cursor support (Ctrl+N)
+  - **auto-pairs** - Automatic bracket/quote completion
+  - **vim-jsx-pretty** - JSX/TSX syntax highlighting and indentation
+
+#### CoC Extensions Installed:
+
+- `coc-tslint-plugin` - TypeScript linting
+- `coc-tsserver` - TypeScript language server
+- `coc-css` - CSS language support
+- `coc-html` - HTML language support
+- `coc-json` - JSON language support
+- `coc-prettier` - Code formatting
+
+#### Key Mappings:
+
+- `<C-f>` - Focus NERDTree
+- `<C-n>` - Open NERDTree
+- `<C-t>` - Toggle NERDTree
+- `<C-l>` - Jump to definition (CoC)
+- `<F8>` - Toggle Tagbar
+- `<Tab>` - Confirm autocompletion
+
+#### Editor Settings:
+
+- Relative line numbers
+- 4-space indentation
+- Mouse support enabled
+- UTF-8 encoding
+- No preview for autocompletion
+
+### PowerShell Profile
+
+- **Location**: `powershell/Profile.ps1`
+- **Features**:
+  - Oh My Posh prompt with Robby Russell theme
+  - Git aliases (gst, ga, wip, etc.)
+  - Custom functions (poff, init, rd, whereis)
+  - Terminal-Icons and PSReadLine modules
+  - Chocolatey integration
+
+### Starship Configuration
+
+- **Location**: `starship/starship.toml`
+- **Features**:
+  - Custom prompt format with username, hostname, directory
+  - Git integration with status indicators
+  - Python environment display
+  - Command duration tracking
+  - Custom symbols and colors
+
+### Komorebi Configuration
+
+- **Location**: `komorebi/komorebi.json`
+- **Features**:
+  - Tiling window management
+  - Custom workspace layouts
+  - Application-specific ignore rules
+  - Smooth animations
+  - Multi-monitor support
+
+### Editor Configurations
+
+#### Cursor Settings
+
+- **Location**: `cursor/settings.json`
+- **Features**:
+  - Ayu Mirage Zed theme
+  - Custom CSS styling
+  - Optimized editor settings
+  - Git integration
+  - Prettier formatting
+
+#### VS Code Settings
+
+- **Location**: `vscode/settings.json`
+- **Features**:
+  - Similar to Cursor but with VS Code-specific optimizations
+  - GitHub Copilot integration
+  - Enhanced security settings
+
+#### Custom CSS
+
+- **Location**: `cursor/custom.css` and `vscode/custom.css`
+- **Features**:
+  - Zed-inspired styling
+  - Custom command center appearance
+  - Status bar modifications
+  - Font customization (Lilex font)
+
+### Additional Tools
+
+#### lsd Configuration
+
+- **Location**: `lsd/`
+- **Features**:
+  - Custom colors and icons
+  - Optimized display settings
+
+#### YASB Configuration
+
+- **Location**: `yasb/`
+- **Features**:
+  - Custom status bar styling
+  - System information display
+
+## 🚀 Quick Setup
+
+1. **Clone this repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/my-dotfiles.git
+   cd my-dotfiles
    ```
 
-## 9. Instalando e Configurando o posh-git
+2. **Install all tools** (run the installation commands above)
 
-O **posh-git** é um módulo que exibe o estado dos repositórios Git no prompt do PowerShell.
+3. **Copy configuration files**:
 
-### 9.1. Instalando o posh-git
+   ```powershell
+   # PowerShell profile
+   Copy-Item "powershell\Profile.ps1" "$PROFILE" -Force
 
-**Usando Chocolatey**:
+   # Starship config
+   Copy-Item "starship\starship.toml" "$env:USERPROFILE\.config\starship.toml" -Force
 
-```powershell
-choco install poshgit
+   # Komorebi config
+   Copy-Item "komorebi\komorebi.json" "$env:USERPROFILE\.config\komorebi\komorebi.json" -Force
+
+   # Neovim config
+   Copy-Item "nvim\init.vim" "$env:LOCALAPPDATA\nvim\init.vim" -Force
+   ```
+
+4. **Apply editor settings**:
+
+   - Copy the settings.json files to your editor's configuration directory
+   - Install the Custom CSS and JS Loader extension
+   - Apply the custom CSS styling
+
+5. **Install Neovim plugins**:
+   ```bash
+   # Open Neovim and install plugins
+   nvim
+   # Then run :PlugInstall
+   # After that, install CoC extensions:
+   :CocInstall coc-tslint-plugin coc-tsserver coc-css coc-html coc-json coc-prettier
+   ```
+
+## 🎨 Customization
+
+### Fonts
+
+The custom CSS uses the **Lilex** font (same as Zed editor). You can change this by:
+
+1. Installing your preferred font
+2. Updating the `font-family` property in the CSS files
+
+### Themes
+
+Both Cursor and VS Code use the **Ayu Mirage Zed** theme. You can install it from the marketplace or change to your preferred theme.
+
+### Colors
+
+The configurations use a purple/cyan color scheme. You can customize colors in:
+
+- Starship configuration (`starship.toml`)
+- Custom CSS files
+- Komorebi border colors
+
+## 🔄 Updates
+
+To update your dotfiles:
+
+```bash
+git pull origin main
+# Re-copy the configuration files you want to update
 ```
 
-**Usando Scoop**:
+## 📝 Notes
 
-```powershell
-scoop bucket add extras
-scoop install posh-git
-Add-PoshGitToProfile
-```
+- The PowerShell profile includes both Oh My Posh and Starship configurations (Starship is commented out)
+- Komorebi is configured to ignore certain applications (games, launchers, etc.)
+- The custom CSS makes the editors look as close as possible to Zed
+- All configurations are optimized for Windows but should work on WSL
 
-### 9.2. Configurando o posh-git
+## 🤝 Contributing
 
-Adicione a seguinte linha ao `$PROFILE`:
+Feel free to submit issues and enhancement requests!
 
-```powershell
-Import-Module posh-git
-```
-
-## 10. Instalando e Configurando o yasb
-
-O **yasb** (Yet Another Status Bar) é uma barra de status minimalista e personalizável para o Windows.
-
-1. Acesse o repositório [yasb no GitHub](https://github.com/amnweb/yasb) e baixe a versão mais recente.
-2. Extraia o conteúdo em uma pasta de sua escolha.
-3. Configure o yasb editando os arquivos `config.yaml` e `styles.css` na sua pasta `.config` conforme suas preferências para temas e módulos.
-
-Para mais instruções detalhadas, consulte a [documentação oficial do yasb](https://github.com/amnweb/yasb).
-
-## 11. Instalando e Configurando o komorebi
-
-O **komorebi** é um gerenciador de janelas para Windows que facilita o uso de tiling e organização de janelas automaticamente.
-
-1. Acesse o [repositório do komorebi no GitHub](https://github.com/LGUG2Z/komorebi) e siga as instruções para download e instalação.
-2. Para configurar, abra o arquivo `komorebi.json` na pasta `users/user` e ajuste as opções de layout e comportamento das janelas de acordo com suas preferências.
-
-Para mais detalhes, consulte a [documentação oficial do komorebi](https://github.com/LGUG2Z/komorebi).
-
+**Happy coding! 🎉**

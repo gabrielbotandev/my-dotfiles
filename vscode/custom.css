@@ -1,0 +1,65 @@
+* {
+    font-family: 'Lilex'; /* Zed IDE font, can use any font you want */
+  }
+  .quick-input-widget {
+    position: absolute !important;
+    top: 200px !important;
+    left: 50%;
+    border-radius: 10px;
+    border: 1px solid var(--vscode-textSeparator-foreground) !important;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.2) !important;
+  }
+  /* left title bar (controls) */
+  .titlebar-left {
+    max-width: 70px !important;
+  }
+  /* center title bar */
+  .titlebar-center {
+    margin: 0 !important;
+  }
+  /* arrow buttons */
+  .action-item.menu-entry {
+    display: none !important;
+  }
+  /* whole title bar command center container */
+  .action-item.command-center-center {
+    background-color: transparent !important;
+    border: none !important;
+    width: fit-content !important;
+  }
+  /* field */
+  .quick-input-header {
+    padding: 0 !important;
+  }
+  /* input element container */
+  .quick-input-header > .quick-input-and-message .monaco-inputbox {
+    border-radius: 10px 10px 0 0 !important;
+  }
+  /* actual input element */
+  .quick-input-header > .quick-input-and-message > .quick-input-filter > .quick-input-box input {
+    padding: 8px 10px !important;
+  }
+  /* list of results */
+  .quick-input-list > .monaco-list > .monaco-scrollable-element {
+    padding: 4px 6px !important;
+  }
+  /* status bar set height */
+  div:has(> .statusbar) {
+    height: 25px !important;
+    top: auto !important;
+    bottom: 0 !important;
+  }
+  .statusbar {
+    height: 25px !important;
+  }
+  /* hides search icon */
+  .codicon.codicon-search.search-icon {
+    display: none !important;
+  }
+  /* empty editor background */
+  .editor-group-container.empty.active {
+    background-color: var(--vscode-statusBar-background);
+  }
+  div:has(> .tabs-and-actions-container.tabs-border-bottom.empty) {
+    background-color: var(--vscode-statusBar-background) !important;
+  }
