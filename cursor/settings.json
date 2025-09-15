@@ -10,7 +10,7 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.labelFormat": "short",
   "workbench.statusBar.visible": true,
-  "workbench.tree.indent": 12,
+  "workbench.tree.indent": 16,
   "workbench.navigationControl.enabled": false,
   "workbench.editor.enablePreview": false,
   "workbench.productIconTheme": "jetbrains-product-icon-theme", // by "fogio"
