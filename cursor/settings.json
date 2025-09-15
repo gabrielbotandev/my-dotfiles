@@ -5,20 +5,20 @@
   "explorer.confirmPasteNative": false,
   "explorer.confirmDelete": true,
   // Workbench -----------------------------------------------------------------
-  "workbench.iconTheme": "ayu-mirage-zed", // by "Enhanced Jax"
-  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "symbols",
+  "workbench.colorTheme": "Ayu Mirage Zed", // By "EnhancedJax"
+  "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.labelFormat": "short",
   "workbench.statusBar.visible": true,
   "workbench.tree.indent": 12,
-  "workbench.colorTheme": "Ayu Mirage Zed", // by "Enhanced Jax"
   "workbench.navigationControl.enabled": false,
   "workbench.editor.enablePreview": false,
   "workbench.productIconTheme": "jetbrains-product-icon-theme", // by "fogio"
   "workbench.editor.empty.hint": "hidden",
-  "workbench.activityBar.location": "top",
   "workbench.panel.showLabels": false,
   "workbench.layoutControl.enabled": false,
   "breadcrumbs.enabled": false,
+  "symbols.hidesExplorerArrows": true,
   // Editor --------------------------------------------------------------------
   "editor.fontLigatures": true,
   "editor.fontFamily": "Lilex",
@@ -54,9 +54,6 @@
   "terminal.integrated.gpuAcceleration": "off",
   // Autosave ----------------------------------------------------------------
   "files.autoSave": "afterDelay",
-  // Live server Extension ---------------------------------------------------
-  "liveServer.settings.donotShowInfoMsg": true,
-  "liveServer.settings.donotVerifyTags": true,
   // Git ---------------------------------------------------------------------
   "git.openRepositoryInParentFolders": "never",
   "git.enableSmartCommit": true,
@@ -77,10 +74,5 @@
   "prettier.semi": false,
   "prettier.singleQuote": true,
   // Codesnap ----------------------------------------------------------------
-  "codesnap.showLineNumbers": false,
-  // Custom CSS - Extension: be5invis.vscode-custom-css ----------------------
-  "vscode_custom_css.imports": [
-    "file:///Users/gabrielbotan/Documents/custom.css"
-  ],
-  "symbols.hidesExplorerArrows": false
+  "codesnap.showLineNumbers": false
 }
