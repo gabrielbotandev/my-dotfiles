@@ -1,0 +1,29 @@
+macos-titlebar-style=tabs
+
+window-vsync = false
+window-save-state = always
+window-new-tab-position = current
+window-padding-x = 10
+window-padding-y = 10
+window-width = 100
+
+background-opacity = 0.85
+background-blur = 16
+
+theme = CGA
+
+selection-background = #409fff
+selection-foreground = #1f2430
+
+cursor-style = underline
+
+shell-integration-features = no-cursor
+
+font-size = 16
+font-thicken = true
+font-thicken-strength = 1
+font-family = JetBrains Mono Nerd Font
+
+adjust-cell-height = 1
+
+macos-icon = glass
