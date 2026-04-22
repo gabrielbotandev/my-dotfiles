@@ -1,0 +1,170 @@
+configuration {
+    modes: "drun,ssh,filebrowser";
+    show-icons: true;
+    sidebar-mode: true;
+    click-to-exit: true;
+    steal-focus: true;
+    cycle: true;
+
+    font: "JetBrainsMono Nerd Font Mono 20";
+
+    drun-display-format: "{name}";
+    display-drun: "Apps";
+    display-ssh: "SSH";
+    display-filebrowser: "Files";
+}
+
+* {
+    bg0:        #050A12;
+    bg1:        #09111D;
+    bg2:        #0E1828;
+    bg3:        #13233A;
+
+    borderc:    #1D3552;
+    accent:     #79B8FF;
+    accent2:    #A9D6FF;
+
+    fg:         #E6EEF8;
+    fg-muted:   #93A4BA;
+
+    urgent:     #FF7B93;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 58em;
+
+    background-color: @bg0;
+    border: 2px;
+    border-color: @borderc;
+    border-radius: 22px;
+
+    padding: 24px;
+}
+
+mainbox {
+    spacing: 18px;
+}
+
+inputbar {
+    background-color: @bg1;
+    border: 1px;
+    border-color: @borderc;
+    border-radius: 16px;
+
+    padding: 16px 18px;
+    spacing: 14px;
+}
+
+prompt {
+    text-color: @accent;
+    background-color: transparent;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Search apps, SSH hosts, and files";
+    placeholder-color: @fg-muted;
+    cursor-color: @accent;
+}
+
+message {
+    enabled: false;
+}
+
+listview {
+    background-color: transparent;
+    spacing: 10px;
+    lines: 8;
+    columns: 1;
+    scrollbar: false;
+    dynamic: true;
+    fixed-height: false;
+}
+
+element {
+    background-color: @bg1;
+    text-color: @fg;
+    border: 1px;
+    border-color: transparent;
+    border-radius: 16px;
+
+    padding: 14px 16px;
+    spacing: 14px;
+}
+
+element normal.normal {
+    background-color: @bg1;
+    text-color: @fg;
+    border-color: transparent;
+}
+
+element alternate.normal {
+    background-color: @bg1;
+    text-color: @fg;
+    border-color: transparent;
+}
+
+element selected.normal {
+    background-color: @bg2;
+    text-color: @accent2;
+    border-color: @accent;
+}
+
+element selected.alternate {
+    background-color: @bg2;
+    text-color: @accent2;
+    border-color: @accent;
+}
+
+element normal.urgent {
+    background-color: @bg1;
+    text-color: @urgent;
+}
+
+element alternate.urgent {
+    background-color: @bg1;
+    text-color: @urgent;
+}
+
+element selected.urgent {
+    background-color: @bg2;
+    text-color: @urgent;
+    border-color: @urgent;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 1.35em;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+mode-switcher {
+    background-color: transparent;
+    spacing: 12px;
+}
+
+button {
+    background-color: @bg1;
+    text-color: @fg-muted;
+    border: 1px;
+    border-color: transparent;
+    border-radius: 14px;
+
+    padding: 12px 18px;
+}
+
+button selected {
+    background-color: @bg2;
+    text-color: @accent2;
+    border-color: @accent;
+}
