@@ -5,7 +5,7 @@
   "explorer.confirmPasteNative": false,
   "explorer.confirmDelete": true,
   // Workbench -----------------------------------------------------------------
-  "workbench.iconTheme": "ayu-mirage-zed", // By "EnhancedJax"
+  "workbench.iconTheme": "flow-dim", // By "EnhancedJax"
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.labelFormat": "short",
   "workbench.tree.indent": 16,
@@ -18,7 +18,7 @@
   "symbols.hidesExplorerArrows": true,
   // Editor --------------------------------------------------------------------
   "editor.fontLigatures": true,
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "IBM Plex Mono",
   "editor.fontSize": 14,
   "editor.fontWeight": "400",
   "editor.lineHeight": 1.8,
@@ -34,7 +34,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always",
+    "source.fixAll.eslint": "always"
   },
   // Window ------------------------------------------------------------------
   "window.newWindowProfile": "Default",
@@ -56,20 +56,20 @@
   "git.autofetch": true,
   // Formatter ---------------------------------------------------------------
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[prisma]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.defaultFormatter": "Prisma.prisma"
   },
   "prettier.semi": false,
   "prettier.singleQuote": true,
@@ -89,7 +89,7 @@
     "*.sqlite3": "${capture}.${extname}-*",
     "*.db3": "${capture}.${extname}-*",
     "*.sdb": "${capture}.${extname}-*",
-    "*.s3db": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,
@@ -98,12 +98,12 @@
     "editor.quickSuggestions": {
       "other": true,
       "comments": false,
-      "strings": true,
+      "strings": true
     },
-    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "update.releaseTrack": "dev",
   "cursor.composer.usageSummaryDisplay": "always",
@@ -111,22 +111,22 @@
   "go.toolsManagement.autoUpdate": true,
   "remote.portsAttributes": {
     "3000": {
-      "protocol": "https",
-    },
+      "protocol": "https"
+    }
   },
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
   "notebook.lineNumbers": "on",
   "notebook.compactView": false,
   "python.createEnvironment.trigger": "off",
-  "workbench.colorTheme": "Ayu Mirage Zed",
+  "workbench.colorTheme": "One Dark Pro Mix",
   "gruvboxMaterial.darkSelection": "blue",
   "gruvboxMaterial.lightPalette": "original",
   "gruvboxMaterial.lightContrast": "hard",
   "gruvboxMaterial.darkWorkbench": "high-contrast",
   "remote.SSH.remotePlatform": {
-    "mac": "macOS",
+    "mac": "macOS"
   },
   "update.mode": "silentlyApplyOnQuit",
   "window.menuBarVisibility": "compact",
-  "redhat.telemetry.enabled": false,
+  "redhat.telemetry.enabled": false
 }
