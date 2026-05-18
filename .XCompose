@@ -1,0 +1,12 @@
+include "%L"
+
+# dead key
+<dead_acute> <space> : "'" apostrophe
+<dead_grave> <space> : "`" grave
+<dead_circumflex> <space> : "^" asciicircum
+<dead_tilde> <space> : "~" asciitilde
+<dead_diaeresis> <space> : "\"" quotedbl
+
+# cedilla
+<dead_acute> <c> : "ç" ccedilla
+<dead_acute> <C> : "Ç" Ccedilla
